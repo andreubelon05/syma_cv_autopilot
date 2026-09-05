@@ -26,7 +26,7 @@ The algorithmic decision-making core is governed by a Finite State Machine (FSM)
 
 ## Autonomous Navigation \& Control Architecture 
 
-<img src="docs/information\_stages.PNG" width="800">
+<img src="docs/information-stages.png" width="800">
 
 
 
