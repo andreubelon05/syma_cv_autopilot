@@ -10,6 +10,8 @@ The algorithmic decision-making core is governed by a Finite State Machine (FSM)
 
 
 
+
+
 ### Key Technologies \& Methodologies
 
 * **Computer Vision \& AI**: OpenCV, Edge Impulse (YOLO-Pro Object Detection), and ONNX Runtime for low-latency spatial inference.
@@ -28,8 +30,6 @@ The algorithmic decision-making core is governed by a Finite State Machine (FSM)
 
 <img src="docs/information-stages.png" width="800">
 
-
-
 The autonomous system operates on a continuous, low-latency closed loop connecting computer vision to physical hardware actuation. The information travels through the following pipeline:
 
 * **Sensory Input**: The dual-camera setup (frontal and ground) captures real-time video frames of the flight zone.
@@ -41,12 +41,16 @@ The autonomous system operates on a continuous, low-latency closed loop connecti
 
 
 
+
+
 ### Dual-Camera Architecture
 
 Standard webcams and computer vision models struggle with resolution and tracking consistency when a small object moves far away. To significantly extend the flight range and vertical trajectory of the UAV, this system utilizes a dual-camera setup, seamlessly handing over control mid-flight.
 
 * **Camera 0 (Frontal/Computer)**: Dedicated to the initial takeoff and lower-altitude hover phases.
 * **Camera 1 (Downward/Ground)**: Positioned on the floor pointing upwards, taking over navigation as the drone climbs out of the frontal camera's optimal range. This camera specializes in precision ceiling hold, descent, and landing phases.
+
+
 
 
 
@@ -64,11 +68,11 @@ The ratio is calculated continuously for the active camera using the following f
 
 
 
+
+
 ### Finite State Machine (FSM) and Transition Logic
 
 <img src="docs/flight-stages.png" width="800">
-
-
 
 The flight protocol is governed by a strict state machine, where the core power output is anchored to a calibrated baseline, THROTTLE\_HOVER\_BASE (70).
 
@@ -110,6 +114,8 @@ The flight protocol is governed by a strict state machine, where the core power 
   1. The UAV drops dangerously low in the frame: cam1\_cy >= 355 (CY\_GROUND\_EMERGENCY).
   2. The bounding box becomes excessively large due to proximity to the lens: cam1\_height > 110 (HEIGHT\_GROUND\_EMERGENCY).
   3. Both limits are breached for 3 consecutive frames (CONFIRMATION\_FRAMES + 1).
+
+
 
 
 
@@ -156,7 +162,7 @@ A computer vision model was developed to detect the helicopter simultaneously fr
 
 <img src="docs/models-list.png" width="800">
 
-<img src="docs/training-parameters\&results.png" width="800">
+<img src="docs/training-parameters-results.png" width="800">
 
 
 
