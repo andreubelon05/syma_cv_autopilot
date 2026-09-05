@@ -64,7 +64,7 @@ The ratio is calculated continuously for the active camera using the following f
 * **bbox\_height**: This represents the vertical pixel height of the helicopter's bounding box. As the UAV flies higher and further away from the lens, this value decreases due to perspective.
 * **The Advantage**: By dividing the vertical position by the apparent size, the resulting ratio grows exponentially as the helicopter gains altitude. This creates a highly sensitive, scale-invariant proxy for height that remains robust even if the camera's physical pitch angle is slightly altered between flight tests.
 
-<img src="docs/ratio.png" width="300">
+<img src="docs/ratio.png" width="400">
 
 
 
@@ -186,6 +186,7 @@ The implementation of the autopilot was then divided into two stages of incremen
 
 * **Phase 3.1 - Isolated Landing**: The landing logic was designed starting from a provisional takeoff, relying exclusively on the downward-facing ground camera to govern the descent and flare maneuvers based on the recorded empirical data.
 * **Phase 3.2 - Complete Flight Cycle**: The frontal camera was incorporated to govern the autonomous takeoff. Finally, the dynamic navigation transition (control handover) between the frontal camera and the ground camera mid-flight was programmed and stabilized, successfully completing the entire autonomous flight protocol.
+
 
 
 ## 📂 Flight Telemetry & Video Archive
