@@ -1,5 +1,5 @@
 # Autonomous UAV Flight Control via Dual-Camera Computer Vision 
-
+<img src="docs/land.gif" width="800">
 
 
 **Abstract** 
