@@ -64,7 +64,7 @@ The ratio is calculated continuously for the active camera using the following f
 * **bbox\_height**: This represents the vertical pixel height of the helicopter's bounding box. As the UAV flies higher and further away from the lens, this value decreases due to perspective.
 * **The Advantage**: By dividing the vertical position by the apparent size, the resulting ratio grows exponentially as the helicopter gains altitude. This creates a highly sensitive, scale-invariant proxy for height that remains robust even if the camera's physical pitch angle is slightly altered between flight tests.
 
-<img src="docs/ratio.png" width="600">
+<img src="docs/ratio.png" width="300">
 
 
 
