@@ -188,4 +188,11 @@ The implementation of the autopilot was then divided into two stages of incremen
 * **Phase 3.2 - Complete Flight Cycle**: The frontal camera was incorporated to govern the autonomous takeoff. Finally, the dynamic navigation transition (control handover) between the frontal camera and the ground camera mid-flight was programmed and stabilized, successfully completing the entire autonomous flight protocol.
 
 
+## 📂 Flight Telemetry & Video Archive
+
+The complete dataset used to analyze, tune, and validate this system is available in the `data/` directory. This archive provides full transparency into the system's empirical development and contains:
+
+*   **Telemetry Logs (.csv/.xlsx):** Synchronized frame-by-frame recordings of the computer vision bounding boxes, geometric altitude ratios, and the exact hexadecimal IR control signals emitted during both manual and autonomous flights.
+*   **Raw Flight Footage:** A compiled `video_archive.md` document containing direct links to the unlisted YouTube playlists, visually documenting the tests across all development phases.
+
 
