@@ -1,7 +1,7 @@
 # Autonomous UAV Flight Control via Dual-Camera Computer Vision 
 | Autonomous Flight - Demo 1 | Autonomous Flight - Demo 2 |
 | :---: | :---: |
-| <img src="docs/land3.gif" width="800"> | <img src="docs/land1.gif" width="800"> |
+| <img src="docs/land3.gif" width="500"> | <img src="docs/land1.gif" width="500"> |
 
 
 **Abstract** 
