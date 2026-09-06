@@ -161,7 +161,7 @@ In this phase, a PlayStation 4 controller was integrated to fly the aircraft man
 
 ### Phase 2: Artificial Intelligence Model Training
 
-A computer vision model was developed to detect the helicopter simultaneously from both camera perspectives. The process involved collecting and manually annotating a custom dataset on the Edge Impulse platform.
+A computer vision model was developed to detect the helicopter simultaneously from both camera perspectives. The process involved collecting and manually annotating a custom dataset (~1700 photos) on the Edge Impulse platform.
 
 * **Architecture \& Parameters**: To meet the strict accuracy and low-latency requirements, a YOLO-Pro object detection architecture was selected. This required scaling to an Edge Impulse Premium license. The model was configured for a 352x352 pixel image input. Training was executed on a GPU over 100 cycles (epochs) with a learning rate of 0.001 and a batch size of 16.
 
