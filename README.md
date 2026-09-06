@@ -153,8 +153,9 @@ The physical connection between the Raspberry Pi Pico 2W and the helicopter's el
 
 In this phase, a PlayStation 4 controller was integrated to fly the aircraft manually through the PC and microcontroller. A preliminary script (controller\_bit\_mapper) was developed to decode and map the raw joystick signals. This paved the way for the control\_\&\_logger script, which allowed full manual flight control while simultaneously creating an exact telemetry log (datalogging) of all transmitted commands—a fundamental step for extracting the dynamic patterns required for future autonomous flight.
 
+| Raspberry Pi Pico 2W Circuit | PS4 Controller |
 | :---: | :---: |
-| <img src="docs/pico2w.JPG" width="400"> | <img src="docs/controller.JPG" width="400"> |
+| <img src="docs/pico2w.JPG" width="500"> | <img src="docs/controller.JPG" width="300"> |
 
 
 
