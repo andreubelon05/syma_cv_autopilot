@@ -1,9 +1,5 @@
 # Autonomous UAV Flight Control via Dual-Camera Computer Vision 
-<img src="docs/syma2.jpg" width="800">
-
-| Autonomous Flight - Demo 1 | Autonomous Flight - Demo 2 |
-| :---: | :---: |
-| <img src="docs/land3.gif" width="600"> | <img src="docs/land1.gif" width="600"> |
+<img src="docs/syma2.jpg" width="1000">
 
 
 **Abstract** 
@@ -13,6 +9,9 @@ This project details the design and implementation of a complete closed-loop aut
 The algorithmic decision-making core is governed by a Finite State Machine (FSM) and Proportional (P) controllers. The dynamic parameters and transition thresholds for this control logic were empirically derived from the rigorous capture and analysis of manual flight telemetry. High-level navigation instructions computed in Python are transmitted via serial protocol to an embedded Raspberry Pi Pico 2W. This microcontroller acts as the physical actuator, translating the logic into precise PWM-modulated infrared signals to execute the automated maneuvers.
 
 
+| Autonomous Flight - Demo 1 | Autonomous Flight - Demo 2 |
+| :---: | :---: |
+| <img src="docs/land3.gif" width="600"> | <img src="docs/land1.gif" width="600"> |
 
 
 
