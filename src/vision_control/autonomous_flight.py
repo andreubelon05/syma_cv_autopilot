@@ -205,6 +205,7 @@ class CameraWorker(threading.Thread):
         self.window_name = f"Flight Test - Camera {index}"
         self.trajectory = []
         self.traj_lock = threading.Lock()
+        self.total_tracked_points = 0
         self.frame_lock = threading.Lock()
         self.latest_frame = None
         self.latest_height = 0  
@@ -292,7 +293,7 @@ class CameraWorker(threading.Thread):
         
         cv2.putText(frame, f"REC CAM{self.index} | {elapsed_ms} ms", (20, 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.48, (0, 0, 255), 1, cv2.LINE_AA)
-        cv2.putText(frame, f"Infer: {self.last_infer_ms:.1f}ms | Track pts: {len(pts)}", (20, 48),
+        cv2.putText(frame, f"Infer: {self.last_infer_ms:.1f}ms | Track pts: {self.total_tracked_points}", (20, 48),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.42, (200, 200, 200), 1, cv2.LINE_AA)
 
     def _write_paced(self, frame):
@@ -354,6 +355,7 @@ class CameraWorker(threading.Thread):
                     
                     with self.traj_lock:
                         self.trajectory.append(best_pt)
+                        self.total_tracked_points += 1
                         if len(self.trajectory) > MAX_TRAJECTORY_LEN:
                             self.trajectory.pop(0)
                     with self.frame_lock:
